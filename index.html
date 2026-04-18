@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fitness Kitchen</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+  <div class="container">
+   <a class="navbar-brand" href="#">
+  <span class="brand-fitness">FITNESS</span>
+  <span class="brand-kitchen">KITCHEN</span>
+</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#menu">Menu</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section id="hero" class="text-center text-white d-flex align-items-center justify-content-center">
+  <div class="container">
+    <img src="/images/logo.jpg" alt="Fitness Kitchen Logo" class="hero-logo mb-3">
+    <h1 class="display-4">Healthy Food, Freshly Made</h1>
+    <p class="lead">Delivered to You</p>
+    <a href="#menu" class="btn btn-success btn-lg mt-3">View Menu</a>
+  </div>
+</section>
+
+<!-- Menu Section -->
+<section id="menu" class="py-5">
+  <div class="container">
+    
+    <h2 class="text-center mb-5">Our Menu</h2>
+<div class="row justify-content-start mb-4">
+  <div class="col-md-5 col-lg-4">
+    <input type="text" id="menuSearch" class="form-control shadow-sm border-success-subtle" 
+           placeholder="Search for a meal..." 
+           style="border-radius: 10px; padding: 10px 15px;">
+  </div>
+</div>
+    <!-- Filter Buttons -->
+   <div class="text-center mb-4">
+  <button class="btn btn-success m-1 filter-btn" data-category="All">All</button>
+  <button class="btn btn-outline-success m-1 filter-btn" data-category="Breakfast & Fitness Boxes">Breakfast</button>
+  <button class="btn btn-outline-success m-1 filter-btn" data-category="Omelettes">Omelettes</button>
+  <button class="btn btn-outline-success m-1 filter-btn" data-category="Sandwiches">Sandwiches</button>
+  <button class="btn btn-outline-success m-1 filter-btn" data-category="Burgers">Burgers</button>
+  <button class="btn btn-outline-success m-1 filter-btn" data-category="Chicken Meals">Chicken</button>
+  <button class="btn btn-outline-success m-1 filter-btn" data-category="Beef Meals">Beef</button>
+  <button class="btn btn-outline-success m-1 filter-btn" data-category="Seafood Meals">Seafood</button>
+  <button class="btn btn-outline-success m-1 filter-btn" data-category="Salads">Salads</button>
+  <button class="btn btn-outline-success m-1 filter-btn" data-category="Desserts">Desserts</button>
+</div>
+
+    <!-- ONE CONTAINER ONLY -->
+    <div class="row" id="menu-container"></div>
+
+  </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="py-5 bg-light">
+  <div class="container text-center">
+    <h2>About Fitness Kitchen</h2>
+    <p class="lead">Fitness Kitchen is your go-to place for healthy, fresh, and delicious meals. Our meals are carefully designed to fuel your body and satisfy your taste buds.</p>
+  </div>
+</section>
+<section id="locations" class="py-5" style="background: var(--bg);">
+    <div class="container text-center mb-4">
+        <h2 class="section-title">Our Branches</h2>
+        <p class="text-muted">Select a branch on the map to start navigation</p>
+    </div>
+    <div class="container">
+        <div id="map" style="height: 450px; width: 100%; border-radius: 15px; border: 2px solid var(--border); box-shadow: var(--shadow-md);"></div>
+    </div>
+</section>
+<!-- Contact Section -->
+<section id="contact" class="py-5">
+  <div class="container text-center">
+    <h2>Contact Us</h2>
+    <p>Email: info@fitnesskitchen.com | Phone: +962 790137012</p>
+    <p>Address: Amman, Jordan</p>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-dark text-white text-center py-3">
+  
+  <p>&copy; 2026 Fitness Kitchen. All Rights Reserved.</p>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Custom JS -->
+<script src="../js/main.js"></script>
+</body>
+</html>
